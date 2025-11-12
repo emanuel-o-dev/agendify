@@ -85,8 +85,8 @@ function uploads {
         if [ -L storage ]; then rm storage; fi && \
         ln -s ../storage/app/public storage && \
         mkdir -p ../storage/app/public/covers && \
-        chown -R www-data:www-data ../storage bootstrap/cache && \
-        chmod -R 775 ../storage bootstrap/cache
+        chown -R www-data:www-data ../storage ../bootstrap/cache && \
+        chmod -R 775 ../storage ../bootstrap/cache
     "
 
     echo "Link simbólico criado e permissões ajustadas."
