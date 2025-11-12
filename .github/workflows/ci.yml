@@ -20,13 +20,11 @@ jobs:
 
       - name: Composer install
         run: ./run composer install
-
-      - name: Setup Uploads assets permissions
-        run: ./run uploads
-
       - name: Up containers
         run: ./run up -d
-
+      
+      - name: Setup Uploads assets permissions
+        run: ./run uploads
       - name: PHPUnit Units test
         run: ./run test tests/Unit
 
